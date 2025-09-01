@@ -1,14 +1,16 @@
 .navbar {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
   background: #a29e9e;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 0px px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
+
 
 .logo {
   font-size: 1.2rem;

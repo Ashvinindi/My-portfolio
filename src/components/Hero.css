@@ -7,19 +7,24 @@
 }
 
 .profile-pic {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
+  width: 300px;
+  height: 250px;
+  border-radius: 70%;
   object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .Hero-text {
+
   max-width: 600px;
   text-align: left;
 }
 
-.Hero-text h1 {
-  font-size: 2rem;
+.hero-text h1 {
+  background: linear-gradient(90deg, #353a35, #348ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 15px;
   color: #222;
@@ -27,7 +32,7 @@
 
 .hero-text p {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #555;
   margin-bottom: 20px;
 }

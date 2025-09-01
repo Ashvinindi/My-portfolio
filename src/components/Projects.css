@@ -1,43 +1,134 @@
-.projects {
-  padding: 80px 50px;
-  background: #fafafa;
+/* General Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+#projects h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
   text-align: center;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #353a35, #348ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
 }
 
-.projects h2 {
-  font-size: 1.8rem;
-  margin-bottom: 40px;
-  font-weight: 700;
-  color: #222;
-}
 
+/* Container for projects */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 30px;
+  padding: 40px;
+  justify-items: center;
 }
 
+/* Project Card */
 .project-card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  text-align: left;
-  transition: transform 0.2s;
+  width: 100%;
+  max-width: 350px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-.project-card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
+/* Project Content */
+.project-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.project-content p {
+  font-size: 0.9rem;
+  color: #666;
+  flex-grow: 1;
+}
+
+/* Button */
+.project-content a {
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.project-content a:hover {
+  background-color: #45a049;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 50px 20px;
+  background-color: #f4f4f9;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  transition: transform 0.3s;
+}
+
+.skill img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
   margin-bottom: 10px;
+  transition: transform 0.3s;
 }
 
-.project-card p {
+.skill img:hover {
+  transform: scale(1.2);
+}
+
+.skill p {
+  margin: 0;
   font-size: 0.95rem;
   color: #555;
-  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
