@@ -6,8 +6,6 @@
   <title>Ashvinindi | Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
 </head>
 <body>
   <!-- Navbar -->
@@ -26,70 +24,73 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <img src="profile.png" alt="profile Photo" class="profile-pic">
-
     <h1>Hello, I’m <span>Ashvinindi</span></h1>
-    <p>Undergraduate in Computing & IS | Problem-Solving Enthusiast | Web Development Learner</p>
+    <p class="typing-text"></p>
   </section>
 
- <!-- About Section -->
-<section id="about" class="about">
+  <!-- About Section -->
+  <section id="about" class="about">
     <h2>About Me</h2>
-    <p>
-      I am <strong>Ashvinindi</strong>, an undergraduate student in Computing and Information Systems.  
-      I have a strong passion for <b>problem-solving</b>, <b>web development</b>, and <b>AI</b>.  
-    </p>
-    <p>
-      Over time, I’ve built several academic and personal projects, including a barista shop website,  
-      a YouTube homepage clone, and this portfolio. I am always eager to learn new tools and frameworks,  
-      and I enjoy collaborating with others on exciting tech projects.  
-    </p>
-    <p>
-      My goal is to continuously improve my skills and eventually contribute to meaningful innovations  
-      in the field of software engineering and artificial intelligence.  
-    </p>
+    <div class="about-container">
+      <div class="about-img">
+        <img src="https://raw.githubusercontent.com/Ashvinindi/my-portfolio/main/images/profile.png" alt="Profile Photo">
+      </div>
+      <div class="about-text">
+        <p>
+          I am <strong>Ashvinindi</strong>, an undergraduate student in Computing and Information Systems.  
+          I have a strong passion for <b>problem-solving</b>, <b>web development</b>, and <b>AI</b>.  
+        </p>
+        <p>
+          Over time, I’ve built several academic and personal projects, including a barista shop website,  
+          a YouTube homepage clone, and this portfolio. I am always eager to learn new tools and frameworks,  
+          and I enjoy collaborating with others on exciting tech projects.  
+        </p>
+        <p>
+          My goal is to continuously improve my skills and eventually contribute to meaningful innovations  
+          in the field of software engineering and artificial intelligence.  
+        </p>
+      </div>
+    </div>
   </section>
-  
 
   <!-- Skills Section -->
-<section id="skills" class="skills">
+  <section id="skills" class="skills">
     <h2>My Skills</h2>
     <div class="skills-container">
       <div class="skill-item">
-        <img src="images/html.png" alt="HTML Logo">
+        <img src="https://raw.githubusercontent.com/Ashvinindi/my-portfolio/main/images/html.png" alt="HTML Logo">
         <p>HTML</p>
       </div>
       <div class="skill-item">
-        <img src="images/css.png" alt="CSS Logo">
+        <img src="https://raw.githubusercontent.com/Ashvinindi/my-portfolio/main/images/css.png" alt="CSS Logo">
         <p>CSS</p>
       </div>
       <div class="skill-item">
-        <img src="images/javascript.png" alt="JavaScript Logo">
+        <img src="https://raw.githubusercontent.com/Ashvinindi/my-portfolio/main/images/javascript.png" alt="JavaScript Logo">
         <p>JavaScript</p>
       </div>
       <div class="skill-item">
-        <img src="images/java.png" alt="Java Logo">
+        <img src="https://raw.githubusercontent.com/Ashvinindi/my-portfolio/main/images/java.png" alt="Java Logo">
         <p>Java</p>
       </div>
       <div class="skill-item">
-        <img src="images/reactjs.png" alt="ReactJS Logo">
+        <img src="https://raw.githubusercontent.com/Ashvinindi/my-portfolio/main/images/reactjs.png" alt="ReactJS Logo">
         <p>React.js</p>
       </div>
       <div class="skill-item">
-        <img src="images/nodejs.png" alt="NodeJS Logo">
+        <img src="https://raw.githubusercontent.com/Ashvinindi/my-portfolio/main/images/nodejs.png" alt="NodeJS Logo">
         <p>Node.js</p>
       </div>
       <div class="skill-item">
-        <img src="images/mysql.png" alt="MySQL Logo">
+        <img src="https://raw.githubusercontent.com/Ashvinindi/my-portfolio/main/images/mysql.png" alt="MySQL Logo">
         <p>MySQL</p>
       </div>
       <div class="skill-item">
-        <img src="images/mongodb.png" alt="MongoDB Logo">
+        <img src="https://raw.githubusercontent.com/Ashvinindi/my-portfolio/main/images/mongodb.png" alt="MongoDB Logo">
         <p>MongoDB</p>
       </div>
     </div>
   </section>
-  
 
   <!-- Projects Section -->
   <section id="projects" class="projects">
@@ -108,12 +109,12 @@
   </section>
 
   <!-- Contact Section -->
-<section id="contact" class="contact">
+  <section id="contact" class="contact">
     <h2>Contact Me</h2>
     <div class="contact-container">
       <div class="contact-item">
         <i class="fas fa-envelope"></i>
-        <a href="mailto:yourmail@example.com">ashvinindiu@example.com</a>
+        <a href="mailto:ashvinindiu@example.com">ashvinindiu@example.com</a>
       </div>
       <div class="contact-item">
         <i class="fab fa-linkedin"></i>
@@ -125,11 +126,40 @@
       </div>
     </div>
   </section>
-  
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Ashvinindi | All Rights Reserved</p>
   </footer>
+
+  <!-- Typing Animation Script -->
+  <script>
+    const texts = [
+      "Undergraduate in Computing & IS",
+      "Problem-Solving Enthusiast",
+      "Web Development Learner"
+    ];
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+
+    (function type() {
+      if (count === texts.length) {
+        count = 0;
+      }
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+
+      document.querySelector(".typing-text").textContent = letter;
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1500); // pause before next text
+      } else {
+        setTimeout(type, 100);
+      }
+    })();
+  </script>
 </body>
 </html>
